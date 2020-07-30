@@ -4,11 +4,11 @@ from shutil import copy
 from random import sample
 
 
-def main(data_dir, backup_dir, percentage):
+def main(data_dir, backup_dir, percentage, save):
    # temperory:
     data = Path(data_dir) #from user
     classes = data / 'classes.txt'
-    out = Path('./obj')
+    out = Path(save) #from user
     train_txt = out / 'train.txt'
     test_txt = out / 'test.txt'
     obj_names = out / 'obj.names'
@@ -62,8 +62,10 @@ if __name__ == '__main__':
                         help="Path to folder containing train & test folders.")
     parser.add_argument('-o', '--out', type=str, required=True, 
                         help="Path to output folder.")
+    parser.add_argument('-s', '--save', type=str, required=True, 
+                        help="Path where obj folder will be saved.")
     parser.add_argument('-p', '--percent', type=int, required=True, 
                     help="Percent split your dataset.")
     args = parser.parse_args()
 
-    main(args.data, args.out, args.percent)
+    main(args.data, args.out, args.percent, args.save)
