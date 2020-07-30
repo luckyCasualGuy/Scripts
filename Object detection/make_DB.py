@@ -10,6 +10,8 @@ args = parser.parse_args()
 final = Path(args.dst)
 p = Path(args.src)
 
+final.mkdir(exist_ok=True)
+
 img_dirs = [x for x in p.iterdir() if p.is_dir()]
 classes = []
 

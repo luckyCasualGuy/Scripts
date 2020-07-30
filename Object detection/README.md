@@ -35,12 +35,14 @@ output will be like:
 <br>
 
 **This is how you use it:**  
-**`python make_obj.py -d <data> -o <out>`**
+**`python make_obj.py -d <data> -o <out> -p <percentage>`**
 <br>
 
-**`data`** contains the DataBase of Images such that it has two DIRs, `train` & `test`.  
+**`data`** contains the DataBase of Images such that it has two DIRs, `train` **ONLY!**.  
 
 **`out`** will contain 4 files. `obj.name`, `obj.data`, `train.txt` & `test.txt`.  
+
+**`percentage`** specifies how percentage split of images in `train` DIR.
 
 <hr>
 
