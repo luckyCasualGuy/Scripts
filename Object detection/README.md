@@ -31,6 +31,8 @@ output will be like:
 
 <hr>
 
+## This requires python 3.8
+
 **make_obj.py**: **`This script is used to make obj.data & obj.names out of Data base obtained out of make_DB.py.`**  
 <br>
 
